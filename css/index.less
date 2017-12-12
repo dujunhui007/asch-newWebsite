@@ -1,11 +1,11 @@
-body,html{
+body, html {
   width: 100%;
   height: 100%;
 }
 
-nav{
+nav {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 60px;
@@ -13,42 +13,43 @@ nav{
   background: lightskyblue;
   padding: 0 10%;
   box-sizing: border-box;
-  .navLeft{
+  z-index: 999;
+  .navLeft {
     display: inline-block;
     height: 50px;
     margin-top: 5px;
     //background: green;
-    span{
+    span {
       display: block;
     }
-    .navLogo{
+    .navLogo {
       width: 110px;
       height: 50px;
       background: url("../images/aschLogo.png") no-repeat center;
       background-size: cover;
     }
   }
-  .navRight{
+  .navRight {
     width: 70%;
     height: 58px;
     text-align: right;
     display: inline-block;
     float: right;
     background: lightskyblue;
-    ul.navRightItems{
+    ul.navRightItems {
       width: 100%;
       font-size: 0;
-      li:hover{
+      li:hover {
         border-top: 2px solid #3eadd3;
-        i{
+        i {
           background: url("../images/arrowUp.png") no-repeat center;
           background-size: cover;
         }
-        ul.navTreeView{
+        ul.navTreeView {
           display: block;
         }
       }
-      li{
+      li {
         width: 12%;
         height: 58px;
         line-height: 58px;
@@ -60,26 +61,26 @@ nav{
         font-size: 16px;
         border-top: 2px solid lightskyblue;
         color: blue;
-        span{
+        span {
           display: inline-block;
         }
-        i{
+        i {
           display: inline-block;
           width: 13px;
           height: 7px;
           background: url("../images/arrowDown.png") no-repeat center;
           background-size: cover;
         }
-        ul.navTreeView{
+        ul.navTreeView {
           width: 150%;
           display: none;
           z-index: 2;
-          li:last-child{
+          li:last-child {
             border-bottom: none;
             border-bottom-left-radius: 3px;
             border-bottom-right-radius: 3px;
           }
-          li{
+          li {
             width: 100%;
             height: 40px;
             line-height: 40px;
@@ -98,29 +99,47 @@ nav{
   }
 }
 
-.section{
+.section {
   width: 100%;
   height: 100%;
-  text-align: center;
+  //text-align: center;
 }
 
-.topContainer{
-  .topContainerCenter{
-
+.topContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //padding-top: calc(~"50% - 200px");
+  box-sizing: border-box;
+  .topContainerCenter {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    //background: red;
+    left: calc(~"50% - 200px");
+    top: calc(~"50% - 200px");
+    z-index: 3;
+    span {
+      display: block;
+      width: 300px;
+      height: 300px;
+      margin-left: 50px;
+      background: url("../images/asch.png") no-repeat center;
+      background-size: cover;
+    }
   }
 }
 
-
-
-.section:nth-child(2n){
-  background:cornflowerblue ;
+.section:nth-child(2n) {
+  background: cornflowerblue;
 }
 
-.section:nth-child(2n+1){
-  background:lemonchiffon ;
+.section:nth-child(2n+1) {
+  background: lemonchiffon;
 }
 
-footer{
+footer {
   width: 100%;
   height: 200px;
   line-height: 200px;
